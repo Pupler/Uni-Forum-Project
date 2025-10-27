@@ -2,7 +2,7 @@
 
 A lightweight web forum developed as a **course project** at the National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute" (KPI). This project demonstrates fundamental web development skills using **PHP** and **SQLite**.  
 
-## 🚀 Features
+## ⚙️ Features
 
 - User **registration** and **login** system  
 - Create, edit, and view **topics**  
@@ -23,7 +23,7 @@ A lightweight web forum developed as a **course project** at the National Techni
 | `forum.db` | SQLite database |
 | `style.css` | Styling for the forum |
 
-## ⚙️ Installation
+## 🚀 Installation
 
 1. Upload all project files to a PHP-enabled server.  
 2. Ensure `forum.db` is writable by the server.  
