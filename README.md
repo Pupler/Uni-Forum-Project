@@ -32,3 +32,7 @@ A lightweight web forum developed as a **course project** at the National Techni
 ## 📝 Notes
 
 This forum was created purely for educational purposes as part of a **KPI course project**.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
