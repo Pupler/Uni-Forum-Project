@@ -2,14 +2,9 @@
 
 A lightweight web forum developed as a **course project** at the National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute" (KPI). This project demonstrates fundamental web development skills using **PHP** and **SQLite**.  
 
-## ✨ Features
+## 📸 Preview
 
-- User **registration** and **login** system  
-- Create, edit, and view **topics**  
-- Post and edit **messages**  
-- **Admin panel** for managing content  
-- Clean and responsive **CSS design**  
-- SQLite database for storing users, topics, and posts  
+<img width="1920" height="912" alt="grafik" src="https://github.com/user-attachments/assets/618722dc-20d3-458b-a723-768bca17820d" />
 
 ## 📂 Project Structure
 
@@ -23,11 +18,30 @@ A lightweight web forum developed as a **course project** at the National Techni
 | `forum.db` | SQLite database |
 | `style.css` | Styling for the forum |
 
-## 🚀 Getting started
+## ✨ Features
 
-1. Upload all project files to a PHP-enabled server.  
-2. Ensure `forum.db` is writable by the server.  
-3. Open `index.php` in your browser to start using the forum.  
+- User **registration** and **login** system  
+- Create, edit, and view **topics**  
+- Post and edit **messages**  
+- **Admin panel** for managing content  
+- Clean and responsive **CSS design**  
+- SQLite database for storing users, topics, and posts  
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/Pupler/Uni-Forum-Project.git
+
+# Open project folder
+cd Uni-Forum-Project
+
+# Ensure the database file is writable
+chmod 666 forum.db
+
+# Launch your local web server (e.g. XAMPP, MAMP)
+# Then open the project in your browser
+```
 
 ## 📝 Notes
 
