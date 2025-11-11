@@ -6,7 +6,7 @@ A lightweight web forum developed as a **course project** at the National Techni
 
 <img width="1920" height="912" alt="grafik" src="https://github.com/user-attachments/assets/618722dc-20d3-458b-a723-768bca17820d" />
 
-## 📂 Project Structure
+## 🗂 Project Structure
 
 | File | Description |
 |------|-------------|
