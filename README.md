@@ -1,6 +1,6 @@
 # 📨 KPI Forum Project
 
-A lightweight web forum developed as a **course project** at the National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute" (KPI). This project demonstrates fundamental web development skills using **PHP** and **SQLite**.  
+A lightweight web forum built as a course project at the National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute” (KPI), showcasing core web development skills with PHP and SQLite.
 
 ## 📸 Preview
 
