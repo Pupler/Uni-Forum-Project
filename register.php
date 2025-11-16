@@ -9,7 +9,7 @@
     <h1>Реєстрація</h1>
 
     <!-- Форма реєстрації -->
-    <form class="register-form" action="/register_process.php" method="post">
+    <form class="register-form" action="register_process.php" method="post">
         <label>Ім'я користувача:</label>
         <input type="text" name="username" required><br>
         

@@ -19,7 +19,7 @@ try {
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            header('Location: /');
+            header('Location: index.php');
         } else {
             throw new Exception("Невірне ім'я користувача або пароль");
         }
@@ -42,7 +42,7 @@ try {
     <h1>Вхід</h1>
 
     <!-- Форма для входу -->
-    <form class="login-form" action="/login.php" method="post">
+    <form class="login-form" action="login.php" method="post">
         <label>Ім'я користувача:</label>
         <input type="text" name="username" required><br>
 

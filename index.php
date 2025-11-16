@@ -35,7 +35,7 @@ if (!$checkUsersTable->fetchColumn()) {
 // Вихід користувача
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     session_destroy();
-    header('Location: /');
+    header('Location: index.php');
     exit;
 }
 
@@ -48,7 +48,7 @@ if ($loggedIn && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_topi
     $stmt = $pdo->prepare("INSERT INTO topics (title) VALUES (:title)");
     $stmt->bindParam(':title', $title, PDO::PARAM_STR);
     $stmt->execute();
-    header('Location: /');
+    header('Location: index.php');
     exit;
 }
 
@@ -64,7 +64,7 @@ if ($loggedIn && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_post
     $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
     
     if ($stmt->execute()) {
-        header("Location: /?topic_id=$topic_id");
+        header("Location: ?topic_id=$topic_id");
         exit;
     } else {
         echo "Помилка при додаванні допису";
@@ -119,21 +119,21 @@ if ($loggedIn) {
 
     <!-- Кнопки для реєстрації, входу і виходу -->
     <?php if (!$loggedIn): ?>
-        <a href="/register.php" class="register-button">Реєстрація</a>
-        <a href="/login.php" class="login-button">Вхід</a>
+        <a href="register.php" class="register-button">Реєстрація</a>
+        <a href="login.php" class="login-button">Вхід</a>
     <?php else: ?>
         <span class="user-name">Вітаємо, <b><?php echo $_SESSION['username']; ?></b>!</span>
         <?php if ($isAdmin): ?> <!-- Перевірка на адміна -->
-            <a href="/admin.php" class="admin-button">Адмін-Панель</a> <!-- Додана кнопка для адміна -->
+            <a href="admin.php" class="admin-button">Адмін-Панель</a> <!-- Додана кнопка для адміна -->
         <?php endif; ?>
-        <a href="/?action=logout" class="logout-button">Вихід</a>
+        <a href="?action=logout" class="logout-button">Вихід</a>
     <?php endif; ?>
 
     <!-- Форма для створення нової теми (доступно для авторизованих користувачів) -->
     <?php if ($loggedIn): ?>
         <div class="topic">
             <h2>Створити нову тему</h2>
-            <form action="/" method="post">
+            <form action="index.php" method="post">
                 <input class="input-field" type="text" name="title" placeholder="Назва теми" required>
                 <input class="submit-button" type="submit" name="new_topic" value="Створити">
             </form>
@@ -145,7 +145,7 @@ if ($loggedIn) {
         <h2>Теми:</h2>
         <ul>
             <?php foreach ($topics as $topicItem): ?>
-                <li><a href="/?topic_id=<?= $topicItem['id'] ?>"><?= htmlspecialchars($topicItem['title']) ?></a></li>
+                <li><a href="?topic_id=<?= $topicItem['id'] ?>"><?= htmlspecialchars($topicItem['title']) ?></a></li>
             <?php endforeach; ?>
         </ul>
     </div>
@@ -164,7 +164,7 @@ if ($loggedIn) {
 
             <!-- Форма для додавання допису (доступно для авторизованих користувачів) -->
             <?php if ($loggedIn): ?>
-                <form class="make-post" action="/" method="post">
+                <form class="make-post" action="index.php" method="post">
                     <input type="hidden" name="topic_id" value="<?= $topic['id'] ?>">
                     <textarea name="content" placeholder="Введіть текст допису..." required></textarea>
                     <input type="submit" name="new_post" value="Опублікувати">
