@@ -4,7 +4,7 @@ A lightweight web forum built as a course project at the National Technical Univ
 
 ## 📸 Preview
 
-<img width="1920" height="912" alt="grafik" src="https://github.com/user-attachments/assets/618722dc-20d3-458b-a723-768bca17820d" />
+<img width="1920" height="982" alt="grafik" src="https://github.com/user-attachments/assets/3d6e9f4a-8cfe-42de-bd07-71f3adb13084" />
 
 ## 🗂 Project Structure
 
